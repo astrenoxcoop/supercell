@@ -12,7 +12,7 @@ This is done by creating a record on your PDS with the following structure:
   "did": "did:web:the_hostname",
   "display_name": "Feed A",
   "description": "A useful feed.",
-  "created_at": "2024-10-30T16:15:31Z"
+  "createdAt": "2024-10-30T16:15:31Z"
 }
 ```
 
@@ -25,4 +25,3 @@ The `publish.py` script can be used to create new feed records or update existin
 1. Create a new virtual environment to run the script in: `python -m venv ./venv/`
 2. Install the atproto library in the virtual environment: `./venv/bin/pip install atproto`
 3. Invoke the script using the virtual environment: `./venv/bin/python ./etc/publish.py --help`
-
