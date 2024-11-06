@@ -10,7 +10,7 @@ This is done by creating a record on your PDS with the following structure:
 {
   "$type": "app.bsky.feed.generator",
   "did": "did:web:the_hostname",
-  "display_name": "Feed A",
+  "displayName": "Feed A",
   "description": "A useful feed.",
   "createdAt": "2024-10-30T16:15:31Z"
 }
