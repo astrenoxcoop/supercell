@@ -1,6 +1,7 @@
 use super::{
-    context::WebContext, handle_get_feed_skeleton::handle_get_feed_skeleton,
-    handle_index::handle_index, handle_well_known::handle_well_known,
+    context::WebContext, handle_describe_feed_generator::handle_describe_feed_generator,
+    handle_get_feed_skeleton::handle_get_feed_skeleton, handle_index::handle_index,
+    handle_well_known::handle_well_known,
 };
 use axum::{http::HeaderValue, routing::get, Router};
 use http::{
@@ -19,6 +20,10 @@ pub fn build_router(web_context: WebContext) -> Router {
         .route(
             "/xrpc/app.bsky.feed.getFeedSkeleton",
             get(handle_get_feed_skeleton),
+        )
+        .route(
+            "/xrpc/app.bsky.feed.describeFeedGenerator",
+            get(handle_describe_feed_generator),
         )
         .layer((
             TraceLayer::new_for_http(),
